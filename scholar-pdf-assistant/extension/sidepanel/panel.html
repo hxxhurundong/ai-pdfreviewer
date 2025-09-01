@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <title>AI 解析面板</title>
+  <style>
+    body { font-family: sans-serif; margin: 8px; }
+    #text-output { 
+      white-space: pre-wrap; 
+      max-height: 300px; 
+      overflow: auto; 
+      border:1px solid #ccc; 
+      padding:8px; 
+      margin-bottom: 12px;
+    }
+    #log { list-style:none; padding:0; }
+    #log li { margin-bottom: 4px; }
+  </style>
+</head>
+<body>
+  <h3>AI 解析</h3>
+  <pre id="text-output">正在提取全文……</pre>
+  <ul id="log"></ul>
+
+  <!-- 加载提取器逻辑 -->
+  <script type="module" src="../pdfjs/web/preprocessor/main.js"></script>
+  <!-- 加载面板脚本 -->
+  <script type="module" src="panel.js"></script>
+</body>
+</html>
